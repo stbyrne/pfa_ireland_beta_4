@@ -4,13 +4,14 @@
     top: 0; left: 0; right: 0; bottom: 0;  
     -webkit-overflow-scrolling: touch;
 }*/
-.ui-panel-position-left.ui-panel-display-reveal, .ui-panel-position-left.ui-panel-open{
+/*#left-panel.ui-panel.ui-panel-open-position-left.ui-panel-display-reveal, .ui-panel-position-left.ui-panel-open{
     top: 0;
+    position: absolute;
+}*/
+
+.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-open{
     position: fixed;
 }
-/*.ui-panel-position-left.ui-panel-open{
-    position: absolute;   
-}*/
 
 
 #noconnect{
