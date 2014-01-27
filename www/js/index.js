@@ -121,9 +121,9 @@ jsonTitles(function(content){
                                     id: 'left-panel'
                                     }).each(function(){
                                 
-                                            $(this).append($('<div />', {
+                                            $(this)/*.append($('<div />', {
                                             'data-role': 'controlgroup'
-                                            }).html('<p>Menu</p>')).append($('<div />', {
+                                            }).html('<p>Menu</p>'))*/.append($('<div />', {
                                                                         'data-role': 'content' 
                                                                         }).append($('<ul />', {
                                                                         'data-role': 'listview',
@@ -366,9 +366,9 @@ function initiateList(){
                                     id: 'left-panel'
                                     }).each(function(){
                                 
-                                            $(this).append($('<div />', {
+                                            $(this)/*.append($('<div />', {
                                             'data-role': 'controlgroup'
-                                            }).html('<p>Menu</p>')).append($('<div />', {
+                                            }).html('<p>Menu</p>'))*/.append($('<div />', {
                                                                         'data-role': 'content' 
                                                                         }).append($('<ul />', {
                                                                         'data-role': 'listview',
