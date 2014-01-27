@@ -508,6 +508,15 @@ span{
     position: relative;
     margin: 5px auto 10px;
     -webkit-box-shadow: 0 0 5px rgba(111, 111, 111, 0.85);
+    box-shadow: 0 0 5px rgba(111, 111, 111, 0.85);
+}
+.static-image-small{
+    width: 50%;
+    display: block;
+    position: relative;
+    margin: 5px auto 10px;
+    -webkit-box-shadow: 0 0 5px rgba(111, 111, 111, 0.85);
+    box-shadow: 0 0 5px rgba(111, 111, 111, 0.85);
 }
 .feature .article-headline{
     margin-top: 0;
