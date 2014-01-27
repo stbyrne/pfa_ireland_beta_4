@@ -58,7 +58,7 @@
     <preference name="SuppressesIncrementalRendering" value="true" />
     <preference name="TopActivityIndicator" value="gray" />
     <!--<preference name="StatusBarOverlaysWebView" value="true" />-->
-    <preference name="StatusBarBackgroundColor" value="#f80000" />
+    <!--<preference name="StatusBarBackgroundColor" value="#f80000" />-->
     
     <!-- ANDROID PREFERENCES -->
         
