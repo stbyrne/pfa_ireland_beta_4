@@ -57,8 +57,8 @@
     <preference name="ShowSplashScreenSpinner" value="true" />
     <preference name="SuppressesIncrementalRendering" value="true" />
     <preference name="TopActivityIndicator" value="gray" />
-    <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#f00" />
+    <!--<preference name="StatusBarOverlaysWebView" value="true" />-->
+    <preference name="StatusBarBackgroundColorByHexString" value="#f80000" />
     
     <!-- ANDROID PREFERENCES -->
         
