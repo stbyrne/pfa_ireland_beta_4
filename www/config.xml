@@ -22,11 +22,7 @@
     <gap:platform name="winphone" />
     
     <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="com.phonegap.plugin.statusbar">
-    
-        <param name="StatusBarBackgroundColor" value="#000000" />
-    
-    </gap:plugin>
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
 	
 	<preference name="permissions"                value="none"/>
 
@@ -61,6 +57,8 @@
     <preference name="ShowSplashScreenSpinner" value="true" />
     <preference name="SuppressesIncrementalRendering" value="true" />
     <preference name="TopActivityIndicator" value="gray" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#f00" />
     
     <!-- ANDROID PREFERENCES -->
         
