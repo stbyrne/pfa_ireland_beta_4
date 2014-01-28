@@ -221,7 +221,9 @@ function initiateList(){
     
 ////////////////////Create empty table for dynamic transfer listed player//////////////////////////
     
-    $('#transferlistContent').html('<table><thead><tr><th>#</th><th>Name</th><th>Club</th><th>Pos</th><th>Age</th><th>dob</th><th>kg</th> <th>Exp</th> </tr></thead><tbody></tbody></table>');
+    $('#transferlistContent').html('<table><thead><tr><th>No.</th><th>Name</th><th>Club</th><th>Pos</th><th>Age</th><th>dob</th><th>kg</th></tr></thead><tbody></tbody></table>');
+    
+    /*$('#transferlistContent').html('<table><thead><tr><th>No.</th><th>Name</th><th>Club</th><th>Pos</th><th>Age</th><th>dob</th><th>kg</th><th>Exp</th></tr></thead><tbody></tbody></table>');*/
     
 ////////////////////Get Current Transfer List from getList.php//////////////////////////
     
@@ -269,17 +271,16 @@ function initiateList(){
                 $weight = $(this)[0].task_weight,
                 $exp = $(this)[0].task_exp;
                 
-            console.log($name);
+            /*$tbody.append($('<tr/>', {
+                'id': 'row'
+            }).html('<td>' + playerNum + '</td><td>' + $name + '</td><td>' + $club + '</td><td>' + $pos + '</td><td>' + $age + '</td><td>' + $dob + '</td><td>' + $weight + '</td><td style="background-color:' + $exp + '"></td>'));*/
+            
             $tbody.append($('<tr/>', {
                 'id': 'row'
+            }).html('<td>' + playerNum + '</td><td>' + $name + '</td><td>' + $club + '</td><td>' + $pos + '</td><td>' + $age + '</td><td>' + $dob + '</td><td>' + $weight + '</td>'));
             
-            }).html('<td>' + playerNum + '</td><td>' + $name + '</td><td>' + $club + '</td><td>' + $pos + '</td><td>' + $age + '</td><td>' + $dob + '</td><td>' + $weight + '</td><td style="background-color:' + $exp + '"></td>'));
-                
-        
-        
+            });
         });
-        
-    });
     
 ////////////////////Get Current News from getNews.php//////////////////////////
     
