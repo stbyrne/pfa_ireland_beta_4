@@ -437,16 +437,18 @@ $(app.pagelist).each(function(i){
         var map = new google.maps.Map(document.getElementById("mapsContent"), myOptions);
         // Add an overlay to the map of current lat/lng
         // Add custom image to map
-        var image = 'images/loc.png';
+        var pfaiOffices = 'images/loc.svg';
+        var mark = 'images/mark.svg';
         var marker = new google.maps.Marker({
             position: latlng,
             map: map,
+            icon: mark,
             title: "You are here!"
         });
         var marker2 = new google.maps.Marker({
             position: defaultLatLng,
             map: map,
-            icon: image,
+            icon: pfaiOffices,
             title: "PFA Ireland Offices"
         });
         
