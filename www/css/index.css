@@ -76,7 +76,7 @@
 }
 .contact-display h3{
     font-size: 1.4em;
-    font-weight: 300;
+    font-weight: 100;
     letter-spacing: -1px;
     color: #2B2B2B;
     margin: 10px auto;
@@ -84,7 +84,6 @@
 }
 .contact-display p{
     font-size: 1.2em;
-    font-weight: 300;
     color: #2B2B2B;
     margin: 10px auto;
     
@@ -95,12 +94,14 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-#contact div.ui-panel-content-wrap-closed{
+/*#contact div.ui-panel-content-wrap-closed{
     background-image: url('../images/montage/home_720_blur.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     min-height: inherit;
-    /*background: rgb(255,255,255);*/
+}*/
+#contact.ui-body-c{
+    background: rgb(255,255,255);
 }
 
 .ui-header{
@@ -239,7 +240,7 @@
     background: #fff !important;   
 }*/
 
-/*Icons*/
+/*Icons Side Menu*/
 
 .icon-transferlist, .icon-news, .icon-membership, .icon-coaching, .icon-health, .icon-career, .icon-antidoping, .icon-tax, .icon-transfer, .icon-betting, .icon-agency, .icon-maps{
     background-image: url('../images/list-icons/list-icons.svg');
@@ -390,6 +391,12 @@
     margin: 10px auto;
     max-height: 90%;
 }
+/*Icons Transfer Table*/
+
+#transferlistContent table thead tr th img{
+    max-width: 18px;
+    margin-left: -4px;  
+}
 
 /*Table for Transfer Listed Players*/
 table{
@@ -401,14 +408,12 @@ table{
 }
 
 thead{
-    font: bold .9em  Helvetica Neue, Helveltica, Calibri, Arial, Verdana, sans-serif !important;
+    font: bold .9em  Helvetica Neue, Helveltica, Calibri, Arial, Verdana, sans-serif;
     color: #00b937;
     color: rgba(0, 170, 50, 0.85);
-    
 }
 tr{
     display: table-row;
-      
 }
 th, td{
     display: table-cell;
@@ -657,33 +662,23 @@ span .ui-icon .ui-icon-plus{
     #home div.ui-panel-content-wrap-open, #home div.ui-body-c:not(#left-panel){
     background-image: url('../images/montage/home_768.png');
     }
-    #contact div.ui-panel-content-wrap-closed{
+    /*#contact div.ui-panel-content-wrap-closed{
         background-image: url('../images/montage/home_768_blur.png');
-        /*background: rgb(255,255,255);*/
-    }
+        background: rgb(255,255,255);
+    }*/
     .home-display h3{
-        width: 35%;
-        font-size: 2.5em;
-        letter-spacing: 0;
+    width: 35%;
+    font-size: 2.5em;
+    letter-spacing: 0;
     }
     .home-display p{
-        margin: 20px 0;
-        width: 30%;
-        font-size: 1.4em;
-    }
-    .contact-display h3{
-        font-size: 1.8em;
-        margin: 20px auto;
-
-    }
-    .contact-display p{
-        font-size: 1.6em;
-        color: #2B2B2B;
-        margin: 20px auto;
+    margin: 20px 0;
+    width: 30%;
+    font-size: 1.4em;
     }
     .feature img, .static-image{
     max-width: 60%;
-        
+    
     }
     .feature .article-headline{
         font-size: 1.6em;  
@@ -722,7 +717,31 @@ span .ui-icon .ui-icon-plus{
     font-size: 2.2em;
     margin: 17px auto;
     }
+    /*Icons Transfer Table*/
     
+    #transferlistContent table thead tr th img{
+        max-width: 25px;
+        margin-left: -4px;  
+    }
+    /*Table for Transfer Listed Players*/
+    table{
+        width: 100%;
+        text-align: left;
+        margin: 5px auto 10px;
+        border-spacing: 2px;
+        border-collapse: collapse;
+    }
+    
+    thead{
+        font-size: 1.2em
+    }
+    th, td{
+        padding: 6px 2px;
+        font-size: 1.2em;
+    }
+    tbody{
+        font-size: 1.2em;  
+    }
     .feature img{
     width: 50%;
     }
@@ -773,13 +792,7 @@ span .ui-icon .ui-icon-plus{
         background-position: 0 -200px;
         height: 900px;  
     }
-    .contact-display h3{
-        font-size: 2em;
 
-    }
-    .contact-display p{
-        font-size: 1.8em;
-    }
     #cont-link a {
         height: 70px;
     }
@@ -852,11 +865,6 @@ span .ui-icon .ui-icon-plus{
     #sectionTitle{
         font-size: 1.6em !important;
     }
-    #subTitle{
-        font-size: 1.4em !important;
-        /*font-weight: 300;*/
-    }
-    
 
         /*Icons*/
 
@@ -908,9 +916,7 @@ span .ui-icon .ui-icon-plus{
 }
 /* Samsung Galaxy S3*/
 @media only screen and (min-width: 719px) and (max-width: 721px) and (-webkit-min-device-pixel-ratio : 2),
-only screen and (min-device-pixel-ratio : 2) 
-
-/*@media (min-width: 719px) and (max-width: 721px)*/{
+only screen and (min-device-pixel-ratio : 2) {
     
     .ui-header{
         height: 100px;  
@@ -934,7 +940,7 @@ only screen and (min-device-pixel-ratio : 2)
     }
     #menuNav img, #homeNav img{
         max-height: 1.5em;
-        margin: 4px 5px;
+        margin: 0 5px;
         /*position: relative;*/
     }
     
@@ -948,24 +954,31 @@ only screen and (min-device-pixel-ratio : 2)
     .feature img{
     width: 50%;
     }
-    #cont-link a {
-        height: 100px;
+    #com{
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    z-index: 100;
     }
-    #cont-link a span:not(.arrow-right-home){
-        font-size: 2em;
-        top: 30%; 
-    }
-    .arrow-right-home{
-        background-size: 25px;
-        top: 25%;
-        width: 50px;
-        height: 50px;
-    }
+    #com div a{
+    height: 120px;
+    width: 25%;
     
+    }
+    #com div a img{
+    margin: 20px 30% 0;
+    max-width: 60%;
+    }
+    #com div a span{
+    font-size: 1.2em;
+    margin: 15px 30px;
+    }
     /*Icons*/
 
     .icon-transferlist, .icon-news, .icon-membership, .icon-coaching, .icon-health, .icon-career, .icon-antidoping, .icon-tax, .icon-transfer, .icon-betting, .icon-agency, .icon-maps{
-    background-image: url('../images/list-icons/list-icons.svg');
+    background-image: url('../images/list-icons/list-icons.png');
     background-repeat: no-repeat;
     background-size: 23px;
     padding-left: 23px;
