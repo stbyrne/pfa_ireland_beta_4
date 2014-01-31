@@ -8,9 +8,9 @@
     top: 0;
     position: absolute;
 }*/
-.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-open{
+/*.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-open{
     position: fixed;
-}
+}*/
 #noconnect{
     width: 70%;
     align-content:center;
@@ -76,7 +76,7 @@
 }
 .contact-display h3{
     font-size: 1.4em;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: -1px;
     color: #2B2B2B;
     margin: 10px auto;
@@ -84,9 +84,9 @@
 }
 .contact-display p{
     font-size: 1.2em;
+    font-weight: 300;
     color: #2B2B2B;
     margin: 10px auto;
-    
 }
 
 #home div.ui-panel-content-wrap-closed, #home div.ui-panel-content-wrap-open, #home div.ui-body-c:not(#left-panel){
@@ -146,7 +146,7 @@
 
 #cont-link{
     bottom: 10px;
-    position: fixed;
+    position: absolute;
     width: 80%;
     margin: auto 6%;
 }
@@ -765,6 +765,19 @@ span .ui-icon .ui-icon-plus{
         padding-left: 90px;
         padding-bottom: 60px;
     }
+/*Contact Address*/
+    .contact-display h3{
+        font-size: 1.8em;
+        font-weight: 300;
+    
+    }
+    .contact-display p{
+        font-size: 1.6em;
+        font-weight: 300;
+        color: #2B2B2B;
+        margin: 15px auto;
+    }
+
     #maps div.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-closed {  
     height: 97%;
     }
