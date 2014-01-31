@@ -23,11 +23,8 @@
         <script>
                 
                 $(document).bind('mobileinit', function(){
-                        $.mobile.defaultPageTransition="fade";
-            /*$.mobile.defaultDialogTransition = 'Slide';*/
-            $.mobile.buttonMarkup.hoverDelay = 0;
-            /*$.mobile.allowCrossDomainPages = true;
-            $.support.cors = true;*/
+                    $.mobile.defaultPageTransition="fade";
+                    $.mobile.buttonMarkup.hoverDelay = 0;
             
                 });
         
@@ -56,7 +53,7 @@
     StatusBar.backgroundColorByHexString("#5f5f5f");
     setTimeout(function(){
         navigator.splashscreen.hide();
-    }, 4500);
+    }, 4000);
         
                 // do your thing!
                 // navigator.notification.alert("Cordova is working");     
@@ -97,21 +94,6 @@
                   
             </div>
         
-            
-        
-            <!--<div id="com" data-role="footer">
-                
-                    <div class="hide"><a href="#" id="call"><img src="images/call_gr.png"/><span>call</span></a></div>
-                    <div><a href="#" id="mail"><img src="images/mail_gr.png"/><span>mail</span></a></div>
-                    <div><a href="#" id="twitter"><img src="images/twit_gr.png"/><span>twitter</span></a></div>
-                    <div><a href="#" id="face"><img src="images/face_gr.png"/><span>facebook</span></a></div>
-            
-            </div>-->
-                
-        
-            
-            
-           
             <!--Slide Content Left Panel-->
             
             <div data-role="panel" id="left-panel" data-theme="c" data-inset="true">
@@ -125,14 +107,9 @@
                     </ul>
                     
                 </div>
-                <!--<div data-role="footer">
-                    
-                
-                </div>-->
 
             </div>
     </div>
- 
         
 <!--End homepage-->
     
@@ -172,19 +149,14 @@
                     </div>
                     
                 </div>
-        
-            
-        
+                
             </div>
         
-            
     </div>
     
-
-    <script src="js/custom/jquery.mobile.custom.min.js"></script>
     <script src="js/fast.js"></script>
+    <script src="js/custom/jquery.mobile.custom.min.js"></script>
     <script src="js/index.js"></script>
     
-        
 </body>
 </html>
