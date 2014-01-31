@@ -21,6 +21,7 @@ function jsonTitles(holdData){
         /*url: 'content.json',*/
         jsonpCallback: 'jsonCallback',
         dataType: 'jsonp',
+        cache: false,
         timeout: 10000,
         success: function(data) {
             /*console.log(data);*/
@@ -36,6 +37,7 @@ function jsonTitles(holdData){
                 url: 'content.json',
                 jsonpCallback: 'jsonCallback',
                 dataType: 'jsonp',
+                cache: false,
                 /*timeout: 5000,*/
                 success: function(data) {
                     console.log(data);
@@ -234,6 +236,7 @@ function initiateList(){
             /*url: 'getList.php',*/
             url: 'http://www.stuartbyrne.com/pfai/getList.php',
             dataType: 'json',
+            cache: false,
             success: function(data) {
                 console.log(data);
                 holdData(data);
@@ -243,6 +246,7 @@ function initiateList(){
         
                     url: 'getList.json',
                     dataType: 'json',
+                    cache: false,
                     success: function(data) {
                         holdData(data);
                     }
@@ -291,6 +295,7 @@ function initiateList(){
                 /*url: 'getNews.php',*/
                 url: 'http://www.stuartbyrne.com/pfai/getNews.php',
                 dataType: 'json',
+                cache: false,
                 success: function(data) {
                     console.log(data);
                     holdNews(data);
@@ -300,6 +305,7 @@ function initiateList(){
         
                     url: 'getNews.json',
                     dataType: 'json',
+                       cache: false,
                     success: function(data) {
                         holdNews(data);
                     }
