@@ -151,6 +151,7 @@
     position: absolute;
     width: 80%;
     margin: auto 6%;
+    z-index: 999;
 }
 #cont-link a {
     text-decoration: none;
