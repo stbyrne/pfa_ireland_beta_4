@@ -8,11 +8,14 @@
     top: 0;
     position: absolute;
 }*/
-.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-open{
+/*.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-open{
     position: absolute;
-}
-.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-closed{
-    -webkit-overflow-scrolling: touch; 
+}*/
+/*.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-closed{
+    position: static;   
+}*/
+.ui-panel.ui-panel-position-left.ui-panel-display-reveal.ui-body-c.ui-panel-animate.ui-panel-open{
+    position: fixed;
 }
 #noconnect{
     width: 70%;
