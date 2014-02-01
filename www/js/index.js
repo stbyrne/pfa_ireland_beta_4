@@ -8,7 +8,7 @@ var app = {
 
 $(function(){
     
-FastClick.attach(document.body);
+/*FastClick.attach(document.body);*/
   
    
 ///////////////////Ajax jsonp function to get data from json file////////////////
