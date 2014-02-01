@@ -11,10 +11,9 @@
 .ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-open{
     position: absolute;
 }
-/*.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-closed{
+.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-closed{
     -webkit-overflow-scrolling: touch; 
-    overflow: scroll;
-}*/
+}
 #noconnect{
     width: 70%;
     align-content:center;
@@ -932,7 +931,8 @@ span .ui-icon .ui-icon-plus{
 }
 /* Samsung Galaxy S3*/
 @media only screen and (min-width: 719px) and (max-width: 721px) and (-webkit-min-device-pixel-ratio : 2),
-only screen and (min-device-pixel-ratio : 2) {
+only screen and (min-device-pixel-ratio : 2)
+/*@media (min-width: 719px) and (max-width:720px)*/{
     
     .ui-header{
         height: 100px;  
@@ -956,41 +956,54 @@ only screen and (min-device-pixel-ratio : 2) {
     }
     #menuNav img, #homeNav img{
         max-height: 1.5em;
-        margin: 0 5px;
+        margin: 3px 5px;
         /*position: relative;*/
     }
     
     #left-panel span{
-    font-size: 1.2em;
+        font-size: 1.2em;
     }
     #left-panel p{
-    font-size: 2.4em;     
+        font-size: 2.4em;     
     }
     
     .feature img{
-    width: 50%;
+        width: 50%;
     }
-    #com{
+    #cont-link a {
+        height: 90px;
+        
+    }
+    #cont-link a span:not(.arrow-right-home) {
+        font-size: 2em;
+        top: 25%;
+    }
+    .arrow-right-home {
+        background-size: 20px;
+        top: 30%;
+        width: 40px;
+        height: 40px;
+    }
+    /*#com{
     left:0;
     bottom: 0;
     width: 100%;
     height: 120px;
     position: fixed;
     z-index: 100;
-    }
-    #com div a{
+    }*/
+    /*#com div a{
     height: 120px;
-    width: 25%;
     
-    }
-    #com div a img{
+    }*/
+    /*#com div a img{
     margin: 20px 30% 0;
     max-width: 60%;
     }
     #com div a span{
     font-size: 1.2em;
     margin: 15px 30px;
-    }
+    }*/
     /*Icons*/
 
     .icon-transferlist, .icon-news, .icon-membership, .icon-coaching, .icon-health, .icon-career, .icon-antidoping, .icon-tax, .icon-transfer, .icon-betting, .icon-agency, .icon-maps{
