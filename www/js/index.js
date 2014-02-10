@@ -22,7 +22,7 @@ function jsonTitles(holdData){
         jsonpCallback: 'jsonCallback',
         dataType: 'jsonp',
         cache: false,
-        timeout: 20000,
+        timeout: 5000,
         success: function(data) {
             /*console.log(data);*/
             holdData(data);
@@ -30,7 +30,7 @@ function jsonTitles(holdData){
             
         },
         error: function() {
-            alert('Unable to connect to database. Services will be limited.');
+            alert('Unable to connect to database. Current Player Transfer List & Latest News will not be included. Please check your connection and restart the application.');
             
             $.ajax({
        
@@ -42,7 +42,7 @@ function jsonTitles(holdData){
                 success: function(data) {
                     console.log(data);
                     holdData(data);
-                    initiateList();
+                    initiateBackList();
                     
                 },
                 error: function() {
@@ -125,9 +125,7 @@ jsonTitles(function(content){
                                     id: 'left-panel'
                                     }).each(function(){
                                 
-                                            $(this)/*.append($('<div />', {
-                                            'data-role': 'controlgroup'
-                                            }).html('<p>Menu</p>'))*/.append($('<div />', {
+                                            $(this).append($('<div />', {
                                                                         'data-role': 'content' 
                                                                         }).append($('<ul />', {
                                                                         'data-role': 'listview',
@@ -142,23 +140,7 @@ jsonTitles(function(content){
 });//////End of Section Loop//////
     
     
-////////////////////Re-arranging the arrays for static text content i.e removing 'transfer list' and 'news' sections/////////////////////
-    
-    app.staticlist.splice(0, 2);
-    app.staticlist.pop();
-    
-    app.pagetextcontent.splice(0, 2);
-    app.pagetextcontent.pop();
-    
-////////////////////Add static text content to static pages/////////////////////
-    
-    $(app.staticlist).each(function(i){
-        var pagename = app.staticlist[i],
-            pagetext = app.pagetextcontent[i];
-           
-           $('#' + pagename + 'Content').html('<img class="static-image" src="images/content/' + pagename + '.png"/><p>' + pagetext + '</p>');
-               
-    });
+
     
 ////////////////////Add loader to Maps page/////////////////////
     
@@ -222,6 +204,26 @@ window.open('https://www.facebook.com/pages/PFAIOfficial/137333183069003');
 /*setTimeout(function(){*/
     
 function initiateList(){
+    
+////////////////////Re-arranging the arrays for static text content i.e removing 'transfer list' and 'news' sections/////////////////////
+    
+    app.staticlist.splice(0, 2);
+    app.staticlist.pop();
+    
+    console.log(app.staticlist);
+    
+    app.pagetextcontent.splice(0, 2);
+    app.pagetextcontent.pop();
+    
+////////////////////Add static text content to static pages/////////////////////
+    
+    $(app.staticlist).each(function(i){
+        var pagename = app.staticlist[i],
+            pagetext = app.pagetextcontent[i];
+           
+           $('#' + pagename + 'Content').html('<img class="static-image" src="images/content/' + pagename + '.png"/><p>' + pagetext + '</p>');
+               
+    });
     
 ////////////////////Create empty table for dynamic transfer listed player//////////////////////////
     
@@ -375,9 +377,7 @@ function initiateList(){
                                     id: 'left-panel'
                                     }).each(function(){
                                 
-                                            $(this)/*.append($('<div />', {
-                                            'data-role': 'controlgroup'
-                                            }).html('<p>Menu</p>'))*/.append($('<div />', {
+                                            $(this).append($('<div />', {
                                                                         'data-role': 'content' 
                                                                         }).append($('<ul />', {
                                                                         'data-role': 'listview',
@@ -393,7 +393,7 @@ function initiateList(){
         
         });
         
-//////////////////Create left panel list from gloabl page array, in individual news pages//////////////////
+//////////////////Create left panel list from gloabl page array, in individual pages//////////////////
 /*console.log($testArray);*/
         
 $(app.pagelist).each(function(i){
@@ -415,6 +415,38 @@ $(app.pagelist).each(function(i){
 }
 
 /*},4000);*/
+
+///////////////////Initiate if no connection///////////
+
+function initiateBackList(){
+    
+//////////////////Create left panel list from gloabl page array, in individual pages//////////////////
+/*console.log($testArray);*/
+        
+$(app.pagelist).each(function(i){
+           
+            $('[data-role="panel"] ul:not(#homeList)').append(
+                        $('<li />', {
+                            'data-theme': 'c'
+                        }).html('<a href="#' + app.pageidlist[i] +'"><span class="icon-' + app.pageidlist[i] + '">&nbsp;' + this + '</span></a><span class="arrow-right"></span>'));
+               
+    });
+    
+////////////////////Add static text content to static pages/////////////////////
+    
+    $(app.staticlist).each(function(i){
+        var pagename = app.staticlist[i],
+            pagetext = app.pagetextcontent[i];
+           
+           $('#' + pagename + 'Content').html('<img class="static-image" src="images/content/' + pagename + '.png"/><p>' + pagetext + '</p>');
+               
+    });
+
+
+}
+
+
+////////////////////End of Initiate////////////////////
 
 
 //////////////////////Initiate Maps///////////////////
