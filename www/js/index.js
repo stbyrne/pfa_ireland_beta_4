@@ -102,6 +102,8 @@ jsonTitles(function(content){
                 'data-theme': 'c'
             }).html('<a href="#' + pageid + '"><span class="icon-' + pageid + '">&nbsp;' + pagetitle + '</span></a><span class="arrow-right"></span>')).listview('refresh');
             
+            console.log('refreshing list')
+            
             
 ///////////////////Creates the individual pages for each section////////////////
                         $body.append($('<div />', {
@@ -272,8 +274,8 @@ function initiateList(){
                 $pos = $(this)[0].task_pos,
                 $age = $(this)[0].task_age,
                 $dob = $(this)[0].task_dob,
-                $weight = $(this)[0].task_weight,
-                $exp = $(this)[0].task_exp;
+                $weight = $(this)[0].task_weight/*,
+                $exp = $(this)[0].task_exp;*/
                 
             /*$tbody.append($('<tr/>', {
                 'id': 'row'
@@ -348,7 +350,7 @@ function initiateList(){
                             /*'data-theme': 'c',*/
                             'data-icon': 'false',
                             'class': 'ui-icon-alt ui-icon-nodisc'
-                        }).html('<a href="#' + $articleid + '"><img src="images/news/' + $image + '"><h2>' + $headline + '</h2><p>' + $text +'</p><p class="ui-li-aside">' + $articledate + '</p></a><span class="arrow-right-news"></span>'));
+                        }).html('<a href="#' + $articleid + '"><img src="' + $image + '"><h2>' + $headline + '</h2><p>' + $text +'</p><p class="ui-li-aside">' + $articledate + '</p></a><span class="arrow-right-news"></span>'));
     
 
                 console.log($articleid);
@@ -367,7 +369,7 @@ function initiateList(){
                                 'data-role': 'content',
                                 'id': $articleid + 'Content',
                                 'class': 'feature'
-                            }).html('<h2 class="article-headline">' + $headline + '</h2><p class="article-caption">' + $caption + '</p><img src="images/news/'+ $image +'"/><span class="article-date">' + $articledate + '</span><p>'+ $text +'</p>')).append($('<div />', {
+                            }).html('<h2 class="article-headline">' + $headline + '</h2><p class="article-caption">' + $caption + '</p><img src="'+ $image +'"/><span class="article-date">' + $articledate + '</span><p>'+ $text +'</p>')).append($('<div />', {
                                     'data-role': 'panel',
                                     'class': 'ui-icon-alt',
                                     id: 'left-panel'
