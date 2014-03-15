@@ -71,9 +71,16 @@ jsonTitles(function(content){
             $body = $('body'),
             section = $(content.app.section);
     
+
+///////////////////Disable anchor tags in json file and add functionality with js//////////////////////    
     
+    $(document).on('click', ".external", function (e) {
+        e.preventDefault();
+        var targetURL = $(this).attr("href");
+        window.open(targetURL, "_system");
+    });
     
-    
+   
 ///////////////////Assigning Titles from json array//////////////////////
     
     
@@ -205,6 +212,8 @@ window.open('https://www.facebook.com/pages/PFAIOfficial/137333183069003');
     
 function initiateList(){
     
+    
+
 ////////////////////Re-arranging the arrays for static text content i.e removing 'transfer list' and 'news' sections/////////////////////
     
     app.staticlist.splice(0, 2);
